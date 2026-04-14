@@ -22,7 +22,7 @@ except ImportError:
 
 load_dotenv()
 
-# Colors, fonts, and styles
+# Palette
 BG       = "#0D1117"
 SURFACE  = "#161B22"
 CARD     = "#1C2128"
@@ -60,7 +60,7 @@ def _sep(parent, color=BORDER, pady=6):
 class NetBoxGUI(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Device & IP Lookup")
+        self.title("Netbox Device & IP Lookup")
         self.geometry("1120x720")
         self.minsize(900, 580)
         self.configure(bg=BG)
@@ -110,9 +110,9 @@ class NetBoxGUI(tk.Tk):
 
         tk.Label(hdr, text="■", font=(SANS, 18), bg=SURFACE,
                  fg=ACCENT).pack(side="left", padx=(16, 6), pady=8)
-        tk.Label(hdr, text="Device & IP", font=(SANS, 14, "bold"),
+        tk.Label(hdr, text="NetBox", font=(SANS, 14, "bold"),
                  bg=SURFACE, fg=WHITE).pack(side="left", pady=8)
-        tk.Label(hdr, text="Lookup", font=(SANS, 10),
+        tk.Label(hdr, text="Device & IP Lookup", font=(SANS, 10),
                  bg=SURFACE, fg=SUBTEXT).pack(side="left", padx=8, pady=8)
 
         # Connection status dot
